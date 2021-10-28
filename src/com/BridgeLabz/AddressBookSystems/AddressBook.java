@@ -1,3 +1,10 @@
+/*
+ * UC3- TO delete a person using person's name.. 
+ * 
+ * @author : Navaya shree
+ * @since : 26-10-21
+ */
+
 package com.BridgeLabz.AddressBookSystems;
 
 import java.util.ArrayList;
@@ -41,6 +48,18 @@ public class AddressBook {
 				addressBook.addContact();
 			} else {
 				System.out.println(" There is no contact ");
+			}
+		}
+	}
+
+	public void deleteContact() {
+		Scanner deleteNameInput = new Scanner(System.in);
+		String deleteFirstName = deleteNameInput.nextLine();
+		for (int increment = 0; increment < contactList.size(); increment++) {
+			if (contactList.get(increment).getFirstName().equals(deleteFirstName)) {
+				contactList.remove(increment);
+			} else {
+				System.out.println(" Name does not exist");
 			}
 		}
 	}

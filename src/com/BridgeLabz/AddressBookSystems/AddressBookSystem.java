@@ -1,8 +1,8 @@
 /*
- * UC3- TO edit existing contact person using their name.. 
+ * UC4- TO delete a person using person's name.. 
  * 
  * @author : Navaya shree
- * @since : 27-10-21
+ * @since : 25-10-21
  */
 package com.BridgeLabz.AddressBookSystems;
 
@@ -16,7 +16,7 @@ public class AddressBookSystem {
 		int flag = 1;
 		while (flag == 1) {
 			System.out.println(" Welcome to address book program ");
-			System.out.println(" Select a choice : 1. Add 2.Edit  3. Exit");
+			System.out.println(" Select a choice : 1. Add 2.Edit  3. Delete 4. Exit");
 			int choice = sc.nextInt();
 			switch (choice) {
 			case 1:
@@ -30,6 +30,12 @@ public class AddressBookSystem {
 				addressBook.editContact();
 				break;
 			case 3:
+				if (addressBook.contactList.isEmpty()) {
+					System.out.println(" Address book is empty ");
+					break;
+				}
+				addressBook.deleteContact();
+			case 4:
 				flag = 0;
 				break;
 			default:
