@@ -2,14 +2,24 @@ package com.BridgeLabz.AddressBookSystems;
 
 public class ContactPerson {
 
-	private String firstName, lastName, city, state, email;
-	private long zip, phoneNumber;
+	private String firstName;
+	private String lastName;
+	private String address;
+	private String city;
+	private String state;
+	private int zip;
+	private long phoneNumber;
+	private String email;
 
-	ContactPerson(String firstName, String lastName, String email, String city, String state, long phoneNumber,
-			long zip) {
-		super();
+	public ContactPerson() {
+
+	}
+
+	public ContactPerson(String firstName, String lastName, String address, String city, String state, int zip,
+			long phoneNumber, String email) {
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.address = address;
 		this.city = city;
 		this.state = state;
 		this.zip = zip;
@@ -17,20 +27,29 @@ public class ContactPerson {
 		this.email = email;
 	}
 
-	public String getfirstName() {
+	public String getFirstName() {
 		return firstName;
+
 	}
 
-	public void setfirstname(String firstName) {
+	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
-	public String getlastname() {
+	public String getLastName() {
 		return lastName;
 	}
 
-	public void setlastName(String lastName) {
+	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public String getCity() {
@@ -49,15 +68,7 @@ public class ContactPerson {
 		this.state = state;
 	}
 
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public long getZip() {
+	public int getZip() {
 		return zip;
 	}
 
@@ -69,16 +80,16 @@ public class ContactPerson {
 		return phoneNumber;
 	}
 
-	public void setPhonenumber(int phoneNumber) {
+	public void setPhoneNumber(long phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
-	@Override
-	public String toString() {
-		return "Contact details:" + "\n" + "FirstName=" + firstName + "\n" + "LastName=" + lastName + "\n" + "City="
-				+ city + "\n" + "State=" + state + "\n" + "Zip=" + zip + "\n" + "PhoneNumber=" + phoneNumber + "\n"
-				+ "Email=" + email;
+	public String getEmail() {
+		return email;
+	}
 
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }
